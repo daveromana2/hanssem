@@ -1,0 +1,450 @@
+@charset "utf-8";
+
+/*reset*/
+body, header, main, footer, section, h1, h2, h3, h4, ul, li, a{
+	margin: 0;
+	padding: 0;
+	color: #262626;
+	font-size: 14px;
+	font-family: /*'NotoR',*/'맑은 고딕','AppleGothic','돋움','Dotum', sans-serif !important;
+	line-height: 24px;
+	word-spacing: 0;
+	letter-spacing: -1px;
+	-webkit-text-size-adjust: none;
+}
+a, a:active, a:hover, a:focus, a:visited {
+	text-decoration: none;
+	/*outline-color: red;*/
+}
+li {
+	list-style: none;
+}
+
+
+#wrap{
+	width: 1280px;
+	margin: 0 auto;
+	/*background-color: #E4F2F0;*/
+	overflow: hidden;
+	position: relative;
+	border-left: 1px solid #DAE2D8;
+	border-right: 1px solid #DAE2D8;
+}
+
+/*header*/
+header {
+	background-color: white;
+	width: 230px;
+	float: left;
+	position: absolute;
+	padding-top: 30px;
+	height: 100%;
+/*	background-image: url('../images/header/bg_head_shadow.png');
+	background-repeat: repeat-y;
+	background-position: right;*/
+	box-shadow: 3px 0px 5px #cacaca;
+	/*border-right: 2px solid #E6E6E6;*/
+}
+
+header > h1 > a {
+	display: block;
+	margin-left: 64px;
+	height: 33px;
+	background: url('../images/header/logo-hanssem.gif') no-repeat;
+	text-indent: -99999px;
+	
+}
+header > h2, 
+header > ul {
+	margin-left: 54px;
+}
+.lnb {
+	margin-top: 99px;
+}
+.lnb a {
+	display: block;
+	/*border: 1px solid red;*/
+	width: 124px;
+}
+.lnb > li > a {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px 0 10px 10px;
+	margin-bottom: 7px;
+	border-top: 1px solid #E6E6E6;
+}
+
+.lnb .two-depth {
+	display: none;
+}
+.lnb > li.view .two-depth {
+	display: block;
+	animation-name: example;
+	animation-duration: 1s;
+}
+
+.lnb > li.view > a{
+	border-bottom: 1px solid red;
+}
+
+@keyframes example {
+    from {opacity: 0.3;}
+    to {opacity: 1;}
+}
+
+
+.lnb > li:first-child a{
+	border-top: 0px;
+}
+
+
+.lnb .two-depth a {
+	display: block;
+	padding: 2px 0 2px 10px;
+	font-size: 13px;
+	color: #a6a6a6;
+	background-image: url('../images/header/bg_bul_gray.gif');
+	background-repeat: no-repeat;
+	background-position: left 50%;
+}
+.lnb .two-depth a:hover,
+.lnb .two-depth a:focus {
+	background-image: url('../images/header/bg_bul_red.gif');
+	color: red;
+}
+.lnb .two-depth li:last-child {
+	margin-bottom: 30px;
+}
+
+/*header - family site*/
+h2.family-site {
+	margin-top: 190px;
+	background: url('../images/header/family-site.gif') no-repeat 10px;
+	text-indent: -9999px;
+	border-bottom: 1px solid #E6E6E6;
+	width: 134px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+ul.family-site a {
+	padding-left: 10px;
+	color: #a6a6a6;
+	font-size: 13px;
+	line-height: 26px;
+	background: url('../images/header/bg_bul_gray.gif') no-repeat left 50%;
+}
+
+/*header - link*/
+ul.social-link {
+	position: absolute;
+	bottom: 200px;
+	/*left: 55px;*/
+}
+ul.social-link a {
+	display: block;
+	width: 44px;
+	height: 44px;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+}
+ul.gallery-contents {
+	overflow: hidden;
+}
+ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+ul.social-link li {
+	float: left;
+	margin: 0 1px;
+}
+ul.social-link a.facebook{
+	background-image: url('../images/header/icon_facebook.gif');
+}
+ul.social-link a.naver-blog{
+	background-image: url('../images/header/icon_blog.gif');
+}
+ul.social-link a.youtube{
+	background-image: url('../images/header/icon_youtube.gif');
+}
+
+/*main*/
+main {
+	width: 960px;
+	/*background-color: #FEFFD4;*/
+	float: right;
+	padding: 30px 50px 0 40px;
+}
+
+/*main-header*/
+.main-header {
+	/*border: 1px solid red;*/
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+.main-header a{
+	padding: 0 10px;
+	/*border: 1px solid lime;*/
+	background-image: url('../images/main/bg_util_bar.gif');
+	background-repeat: no-repeat;
+	background-position: left 50%;
+	color: #a6a6a6;
+	font-size: 12px;
+	font-weight: bold;
+}
+.main-header a:hover,
+.main-header a:focus {
+	color: black;
+}
+.main-header li{
+	float: left;
+}
+.main-header li:first-child a {
+	background: none;
+}
+.main-header .bg-none a{
+	background: none;
+}
+.gnb {
+	float: left;
+}
+.language {
+	float: right;
+}
+.language a.on {
+	color: red;
+}
+.gallery {
+	position: relative;
+	margin-bottom: 50px;
+}
+.gallery > div {
+	width: 960px;
+	overflow: hidden;
+}
+.gallery .gallery-contents {
+	width: 3840px;
+}
+.gallery li{
+	float: left;
+}
+
+/*gallery-button*/
+.gallery-button {
+	position: absolute;
+	right: 18px;
+	bottom: 19px;
+}
+.gallery-button a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	text-indent: -999999px;
+}
+.gallery-button li {
+	margin-left: 3px;
+}
+.gallery-button a.stop-and-start {
+	background-image: url('../images/main/icon_banner_stop.gif');
+}
+.gallery-button a.stop-and-start.stop {
+	background-image: url('../images/main/icon_banner_start.gif');
+}
+.gallery-button a.prev {
+	background-image: url('../images/main/icon_banner_prev.gif');
+}
+.gallery-button a.next {
+	background-image: url('../images/main/icon_banner_next.gif');
+}
+
+/*main short cut*/
+.main-short-cut {
+	border-top: 1px solid #E6E6E6;
+	overflow: hidden;
+	margin-bottom: 38px;
+}
+.main-short-cut div:first-child {
+	float: left;
+}
+.main-short-cut div:last-child {
+	border-left: 1px solid #E6E6E6;
+	float: right;
+}
+.main-short-cut div:first-child section {
+	padding: 25px 25px 25px 0px;
+}
+.main-short-cut div:last-child section {
+	padding: 25px 0 25px 24px;
+}
+.main-short-cut section {
+	width: 454px;
+	border-bottom:1px solid #E6E6E6;
+}
+.main-short-cut section:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.main-short-cut h3 {
+	color: #262626;
+	font-size: 18px;
+	line-height: 28px;
+}
+.main-short-cut span {
+	color: #a6a6a6;
+	display: block;
+}
+.main-short-cut .text {
+	float: left;
+}
+.main-short-cut .image-view {
+	width: 245px;
+	height: 171px;
+	overflow: hidden;
+	float: right;
+}
+.main-short-cut .image-view ul {
+	width: 490px;
+	overflow: hidden;
+}
+.main-short-cut .image-view li {
+	float: left;
+}
+.main-short-cut .short-cut {
+	display: inline-block;
+	color: white;
+	background: url('../images/main/bg_btn_link_gray.png') no-repeat 100px;
+	background-color: #a6a6a6;
+	padding: 7px 57px 8px 11px;
+	margin-top: 8px;
+}
+
+/*main-info*/
+.main-info {
+	clear:both;
+	overflow: hidden;
+	margin-bottom: 33px;
+}
+.main-info section {
+	position: relative;
+}
+.main-info h3 {
+	margin-bottom: 8px;
+	color: #262626;
+	line-height: 28px;
+	border-bottom: 1px solid #eaeaea;
+}
+.main-info .title {
+	/*white-space: nowrap;*/
+	line-height: 28px;
+}
+.main-info .news {
+	width: 457px;
+	margin-right: 23px;
+	float: left;
+}
+.main-info .notice {
+	width: 457px;
+	padding-left:22px;
+	border-left: 1px solid #eaeaea;
+	float: right;
+	height: 121px;
+}
+.main-info li {
+	position: relative;
+}
+.main-info .date {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.main-info .more-button {
+	text-indent: -9999px;
+	display: block;
+	width: 40px;
+	height: 28px;
+	background: url('../images/main/bg_board_more.gif') no-repeat;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+/*main-social*/
+.main-social {
+	margin-bottom: 150px;
+	overflow: hidden;
+}
+.main-social .image {
+	float: left;
+}
+.main-social .link {
+	float: right
+}
+.main-social section {
+	width: 245px;
+}
+.main-social section a{
+	display: block;
+	padding: 20px 0;
+	border-top: 1px solid #eaeaea;
+	background-repeat: no-repeat;
+	background-position: 182px 50%;
+	color: #a6a6a6;
+}
+.main-social .hanssem-blog a {
+	background-image: url('../images/main/bg_blog.gif');
+}
+.main-social .hanssem-facebook a {
+	border-bottom: 1px solid #eaeaea;
+	background-image: url('../images/main/bg_facebook.gif');
+}
+
+/*footer*/
+footer {
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 100px;
+}
+footer * {
+	color: #999;
+	font-size: 12px;
+}
+footer .footer {
+	overflow: hidden;
+	width: 712px;
+	float: left;
+}
+footer .page-link {
+	border-bottom: 1px solid #eaeaea;
+	padding-bottom: 8px;
+}
+footer .page-link a{
+	display: block;
+	padding: 0 10px;
+	background: url('../images/main/bg_util_bar.gif') no-repeat left 50%;
+}
+footer li {
+	float: left;
+}
+footer .page-link li:first-child a{
+	background: none;
+	padding-left: 0;
+}
+footer p {
+	width: 269px;
+	float: left;
+	line-height: 20px;
+}
+footer .store {
+	width: 235px;
+	float: right;
+}
+footer .store h4 {
+	padding-bottom: 8px;
+	border-bottom: 1px solid #eaeaea;
+}
+footer .store ul {
+	margin-top: 12px;
+}
